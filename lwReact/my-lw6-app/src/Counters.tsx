@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from './ButtonProps';
 
 var Counter = () => {
   var [count, setCount] = useState(0);
@@ -15,11 +16,12 @@ var Counter = () => {
   return (
     <div>
       Сколько рыбок съест котенок: {count}
-      <p>
-        <button onClick={handleIncrease}>Дать 1 рыбку</button>
-        <button onClick={MinusCounter}>Отнять 1 рыбку</button>
+      <p>        
+        <Button text={"Дать 1 рыбку"} onClick={handleIncrease}/>
+        <Button text={"Отнять 1 рыбку"} onClick={MinusCounter}/>
       </p>
     </div>
   );
 };
+
 export default Counter;

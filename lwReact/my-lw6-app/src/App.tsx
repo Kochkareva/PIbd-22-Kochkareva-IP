@@ -1,9 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Counter from './Counter';
-import SomeValues from './SomeValues';
-import Comment from './Message';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Counter from "./Counters";
+import SomeValues from "./SomeValues";
+import Comment from "./Message";
+import CounterProp from "./CounterPropss";
 
 function App() {
   return (
@@ -22,11 +23,17 @@ function App() {
           Learn React
         </a>
 
-        <SomeValues firstValue={10} secondValue={255}/>
+        <SomeValues firstValue={10} secondValue={255} />
 
-        <Comment text={'Надеюсь, лабораторная сделана без ошибок'} name={ 'Доброго времени суток!'}  avatarUrl= { 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/28/280ba399538a6ad13c7840eacc8d185091030d90_medium.jpg'} />
-
+        <Comment
+          text={"Надеюсь, лабораторная сделана без ошибок"}
+          name={"Доброго времени суток!"}
+          avatarUrl={
+            "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/28/280ba399538a6ad13c7840eacc8d185091030d90_medium.jpg"
+          }
+        />
         <Counter />
+        <CounterProp start={10} step={5} />
       </header>
     </div>
   );
